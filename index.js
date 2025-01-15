@@ -150,7 +150,7 @@ io.on('connection', (socket) => {
         // let room = data.username === "Guest" ? "agent_room" : data.room;
         io.to(data.room).emit("receiveMessage", {
             msg: data.msg,
-            room: room,
+            room: data.room,
             username: data.username,
             sessionId: data.room
         });
