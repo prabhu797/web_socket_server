@@ -148,7 +148,7 @@ io.on('connection', (socket) => {
         // processQueue();
         // Notify the room
         // let room = data.username === "Guest" ? "agent_room" : data.room;
-        io.to(room).emit("receiveMessage", {
+        io.to(data.room).emit("receiveMessage", {
             msg: data.msg,
             room: room,
             username: data.username,
